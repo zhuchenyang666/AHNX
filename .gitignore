@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.idea/
+.tmp/
+var/
+
+# 防重放运行数据
+resources/replay.sqlite3*
+
+build/
+dist/
+resources/service.log*
+resources/service_*.log
+
+# 订单导入记录，部署升级时保留
+resources/orders.sqlite3*
+
+# report index and order databases are operational data
+安徽农信借记卡订单文件/report/**/*.sqlite3*
+安徽农信借记卡订单文件/report/*.sqlite3*
+
+# 本地业务数据、内部资料及运行数据库
+/安徽农信借记卡订单文件/
+/document/
+*.sqlite
+*.sqlite3

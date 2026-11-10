@@ -1,0 +1,1 @@
+"""Replaceable query repository implementations."""

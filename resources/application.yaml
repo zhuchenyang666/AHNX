@@ -1,0 +1,23 @@
+# 默认本地环境；也可通过环境变量 AHNX_ENV 切换为 production。
+server:
+  active: local
+  rootpath: /
+  ks-code: HB
+  version: 1.7.0
+  title: 安徽农信银行卡商接口
+  environments:
+    local:
+      host: 127.0.0.1
+      port: 8000
+      listen-host: 127.0.0.1
+      reload: true
+    production:
+      host: 192.168.20.166
+      port: 18082
+      listen-host: 0.0.0.0
+      reload: false
+  # 直接填写订单根目录，支持相对 exe 目录的路径和 Windows 绝对路径；修改后重启。
+  # 例如 "D:\data\安徽农信借记卡订单文件"；data 和 report 不存在时递归创建。
+  sftppath: "D:\\data\\安徽农信借记卡订单文件"
+  # 扫描间隔，单位毫秒；默认 1 小时，必须为正整数，修改后重启。
+  scan-interval-ms: 60000
